@@ -54,9 +54,21 @@ public class MainActivity extends AppCompatActivity {
     private void myLoop() {
 
         String tag = "3octV1";
+        String tag2 = "3octV2";
+        String urlJSON = "http://androidthai.in.th/3oct/getAllDataMaster.php";
 
         //Todo
-        Log.d(tag, "Loop Work");
+        try {
+
+            Log.d(tag, "Loop Work");
+            MySynChronize mySynChronize = new MySynChronize(MainActivity.this);
+            mySynChronize.execute(urlJSON);
+            String strJSON = mySynChronize.get();
+            Log.d(tag2, "JSON ==> " + strJSON);
+
+        } catch (Exception e) {
+            Log.d(tag2, "e myLoop ==> " + e.toString());
+        }
 
 
 

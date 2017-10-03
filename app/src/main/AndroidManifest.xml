@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.ewtc.masterung.demoshowtext">
 
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 
     <application
