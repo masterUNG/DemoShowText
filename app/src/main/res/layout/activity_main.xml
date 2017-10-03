@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="app.ewtc.masterung.demoshowtext.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--Content-->
 
-</android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--Number-->
+        <TextView
+            android:id="@+id/txtShowText"
+            android:textColor="#b51bdc"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:textSize="100sp"
+            android:text="8888.88"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--Button-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Start-->
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_weight="1"
+                android:text="Start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Stop-->
+            <Button
+                android:id="@+id/btnStop"
+                android:text="Stop"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
